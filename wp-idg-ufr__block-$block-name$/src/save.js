@@ -9,19 +9,17 @@ import { useBlockProps } from '@wordpress/block-editor';
  *
  * @return {WPElement} Element to render.
  */
-export default function save( { attributes } ) {
+export default function save({ attributes }) {
 	/**
 	 * Desestruturação dos atributos do bloco registrados em block.json -> "attributes"
 	 */
 	const { position } = attributes;
 
 	return (
-		<div { ...useBlockProps.save() }>
+		<div {...useBlockProps.save()}>
 			<div className="row">
-				<div
-					className={ `col-12 d-flex justify-content-${ position }` }
-				>
-					{ /* Renderize o componente aqui */ }
+				<div className={`col-12 d-flex justify-content-${position}`}>
+					{/* Renderize o componente aqui */}
 				</div>
 			</div>
 		</div>

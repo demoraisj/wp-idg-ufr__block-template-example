@@ -12,7 +12,7 @@ import './editor.scss';
  *
  * @return {WPElement} Element to render.
  */
-export default function edit( { attributes, setAttributes, isSelected } ) {
+export default function edit({ attributes, setAttributes, isSelected }) {
 	/**
 	 * Desestruturação dos atributos do bloco registrados em block.json -> "attributes"
 	 */
@@ -44,13 +44,13 @@ export default function edit( { attributes, setAttributes, isSelected } ) {
 	 * @param { boolean } selected
 	 * @return {JSX.Element} Elemento principal condicional
 	 */
-	function ConditionalMainContentRender( selected ) {
+	function ConditionalMainContentRender(selected) {
 		return selected ? (
 			// Visuzalização quando selecionado
 			<div
-				{ ...useBlockProps( {
+				{...useBlockProps({
 					className: 'edit block-responsive ufr-block-component',
-				} ) }
+				})}
 			>
 				<div className="row align-items-center">
 					<div className="col config">
@@ -61,22 +61,22 @@ export default function edit( { attributes, setAttributes, isSelected } ) {
 					</div>
 
 					<div className="row preview">
-						{ /* Renderize o componente aqui */ }
+						{/* Renderize o componente aqui */}
 					</div>
 				</div>
 			</div>
 		) : (
 			// Visuzalização quando não selecionado
 			<div
-				{ ...useBlockProps( {
+				{...useBlockProps({
 					className: 'show block-responsive ufr-block-component',
-				} ) }
+				})}
 			>
-				<div className="row" >
+				<div className="row">
 					<div
-						className={ `col-12 d-flex justify-content-${ position }` }
+						className={`col-12 d-flex justify-content-${position}`}
 					>
-						{ /* Renderize o componente aqui */ }
+						{/* Renderize o componente aqui */}
 					</div>
 				</div>
 			</div>
@@ -90,16 +90,16 @@ export default function edit( { attributes, setAttributes, isSelected } ) {
 					<fieldset>
 						<UFRSelect
 							label="Posição Horizontal do $block-title-capitalized$"
-							options={ positioningOptions }
-							value={ position }
+							options={positioningOptions}
+							value={position}
 							attr="position"
-							setter={ setAttributes }
+							setter={setAttributes}
 						/>
 					</fieldset>
 				</div>
 			</InspectorControls>
 
-			{ ConditionalMainContentRender( isSelected ) }
+			{ConditionalMainContentRender(isSelected)}
 		</Fragment>
 	);
 }
