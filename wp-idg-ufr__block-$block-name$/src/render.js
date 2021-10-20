@@ -6,5 +6,5 @@
  * @return {JSX.Element} Renderização do bloco
  */
 export default function Render({ preview }) {
-	return !preview ? <div>UFR Block</div> : <div>UFR Block Preview</div>
+	return !preview ? <div>UFR Block</div> : <div>UFR Block Preview</div>;
 }
