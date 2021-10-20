@@ -1,4 +1,5 @@
 import { useBlockProps } from '@wordpress/block-editor';
+import Render from "./render";
 
 /**
  * The save function defines the way in which the different attributes should
@@ -19,7 +20,7 @@ export default function save({ attributes }) {
 		<div {...useBlockProps.save()}>
 			<div className="row">
 				<div className={`col-12 d-flex justify-content-${position}`}>
-					{/* Renderize o componente aqui */}
+					<Render />
 				</div>
 			</div>
 		</div>
