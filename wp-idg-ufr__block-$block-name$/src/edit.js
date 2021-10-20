@@ -76,7 +76,7 @@ export default function edit({ attributes, setAttributes, isSelected }) {
 					<div
 						className={`col-12 d-flex justify-content-${position}`}
 					>
-						<Render preview={false} />
+						<Render />
 					</div>
 				</div>
 			</div>
