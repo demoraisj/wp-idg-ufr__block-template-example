@@ -24,18 +24,9 @@ export default function edit({ attributes, setAttributes, isSelected }) {
 	 * @type { {label: string, value: string}[] }
 	 */
 	const positioningOptions = [
-		{
-			label: 'Esquerda',
-			value: 'start',
-		},
-		{
-			label: 'Centro',
-			value: 'center',
-		},
-		{
-			label: 'Direita',
-			value: 'end',
-		},
+		{ label: 'Esquerda', value: 'start' },
+		{ label: 'Centro', value: 'center' },
+		{ label: 'Direita', value: 'end' },
 	];
 
 	/**
