@@ -20,7 +20,7 @@ export default function save({ attributes }) {
 		<div {...useBlockProps.save()}>
 			<div className="row">
 				<div className={`col-12 d-flex justify-content-${position}`}>
-					<Render />
+					<Render attributes={attributes} />
 				</div>
 			</div>
 		</div>
